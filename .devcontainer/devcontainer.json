@@ -3,6 +3,10 @@
     "image": "mcr.microsoft.com/devcontainers/python:3.11",
     "customizations": {
         "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "./.venv/bin/python",
+                "python.terminal.activateEnvInCurrentTerminal": true
+            },
             "extensions": [
                 "ms-python.python",
                 "batisteo.vscode-django",
