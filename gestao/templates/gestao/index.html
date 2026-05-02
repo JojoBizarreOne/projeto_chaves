@@ -1,0 +1,18 @@
+{% extends 'gestao/base.html' %}
+
+{% block title %}Início - Lista de Imóveis{% endblock %}
+
+{% block content %}
+    <h2>Imóveis Cadastrados</h2>
+    <ul>
+        {% for imovel in lista_imoveis %}
+            <li>
+                <strong>{{ imovel.endereco }}</strong> - Proprietário: {{ imovel.proprietario.nome}}
+                <br>
+                <a href="#">Ver Chaves</a>
+            </li>
+        {% empty %}
+            <li>Nenhum imóvel encontrado no banco de dados.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
