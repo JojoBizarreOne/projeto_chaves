@@ -4,15 +4,12 @@
 
 {% block content %}
     <h2>Imóveis Cadastrados</h2>
-    <ul>
-        {% for imovel in lista_imoveis %}
-            <li>
-                <strong>{{ imovel.endereco }}</strong> - Proprietário: {{ imovel.proprietario.nome}}
-                <br>
-                <a href="#">Ver Chaves</a>
-            </li>
+        {% for imovel in imoveis %}
+            <div class="card_imovel container">
+                <h3>{{ imovel.endereco_completo}} </h3> 
+                <p> Proprietário: {{ imovel.proprietario.first_name}} {{ imovel.proprietario.last_name}} </p>
+                <a href="#", class="btn">Ver Chaves</a>
         {% empty %}
             <li>Nenhum imóvel encontrado no banco de dados.</li>
         {% endfor %}
-    </ul>
 {% endblock %}

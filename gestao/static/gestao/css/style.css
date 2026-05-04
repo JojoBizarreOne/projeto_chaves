@@ -1,0 +1,83 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 5vw;
+    text-align: center;
+    margin: 0.7vw 0vw 0.7vw 0vw;
+}
+
+header a {
+    color: #87c5f2;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-right: 1vw;
+}
+
+main {
+    background: #3d678f;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 16px;
+    margin: 1vw auto;
+}
+
+main h2 {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+    padding: 0vw 2vw 0.2vw 0vw;
+    font-size: 1vw;
+}
+
+/* Card para cada imóvel */
+.card-imovel {
+    background: #fff;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-imovel h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Botões de ação */
+.btn {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.container {
+    width: 100vw;
+    max-width: 1800px;
+    margin: 0 auto;
+
+}

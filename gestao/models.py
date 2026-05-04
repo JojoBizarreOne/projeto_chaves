@@ -30,15 +30,19 @@ class Imoveis(models.Model):
     bairro = models.CharField("Bairro", max_length=100)
     cidade = models.CharField("Cidade", max_length=100)
     estado = models.CharField("Estado", max_length=100)
-    proprietario = models.ForeignKey(Usuarios, on_delete=models.CASCADE)
     observacao = models.TextField("Observações", blank=True)
     data_criacao = models.DateField("Data de Cadastro", auto_now_add=True)
     data_atualizacao = models.DateTimeField("Última Atualização", auto_now=True)
+    proprietario = models.ForeignKey(Usuarios, on_delete=models.CASCADE)
 
     class Meta:
         constraints = [models.UniqueConstraint (fields=['rua', 'numero', 'bairro', 'cidade', 'estado'], name='endereco')]
         verbose_name = "Imóvel"
         verbose_name_plural = "Imóveis"
+
+    @property
+    def endereco_completo(self):
+        return f"{self.rua}, nº {self.numero}, {self.bairro}, {self.cidade}/{self.estado}"
  
 
     def __str__(self):

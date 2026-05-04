@@ -1,13 +1,15 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <link rel="stylesheet" href="{% static '/gestao/css/style.css' %}"
         <meta  charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %} {% endblock %}</title>
         <!--LINK CSS-->
     </head>
     <body>
-        <header>
+        <header class="container">
             <h1> Sistema de Gestão de Chaves </h1>
             <nav>
                 <a href="{% url 'index' %}">Início</a>
